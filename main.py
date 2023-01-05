@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+""" qr scanner
+"""
+
+# W0613: Unused argument 'args' (unused-argument)
+# pylint: disable=W0613
+
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
@@ -32,13 +39,14 @@ class QrScanner(BoxLayout):
 
     def read_qr_text(self, *args):
         """Check if zbarcam.symbols is filled and stop scanning in such case"""
-        if(len(self.zbarcam.symbols) > 0): # when something is detected
+        if (len(self.zbarcam.symbols) > 0): # when something is detected
             self.qr_text = self.zbarcam.symbols[0].data # text from QR
             Clock.unschedule(self.read_qr_text, 1)
             self.zbarcam.stop() # stop zbarcam
             self.zbarcam.ids['xcamera']._camera._device.release() # release camera
 
     def share(self):
+        """intent code"""
         intent = Intent()
         intent.setAction(Intent.ACTION_SEND)
         intent.putExtra(Intent.EXTRA_TEXT, String('test share text'))
@@ -48,6 +56,7 @@ class QrScanner(BoxLayout):
 
 class QrApp(App):
     def build(self):
+        """intent code"""
         return QrScanner()
 
 if __name__ == '__main__':
