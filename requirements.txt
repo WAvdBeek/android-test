@@ -1,6 +1,5 @@
-configparser
 kivy
-#cyton==20.2
+configparser
 pyjnius 
 kivy_garden.zbarcam --extra-index-url https://kivy-garden.github.io/simple/
 buildozer
