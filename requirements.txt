@@ -1,0 +1,9 @@
+configparser
+kivy
+#cyton==20.2
+pyjnius 
+kivy_garden.zbarcam --extra-index-url https://kivy-garden.github.io/simple/
+buildozer
+
+# python -m pip install --upgrade pip setuptools
+# python -m pip install --upgrade cython

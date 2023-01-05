@@ -1,0 +1,12 @@
+src/__pycache__
+.vscode
+src/kisETS.dll
+src/knx_ets.py
+src/build
+src/dist
+src/*.zip
+src/*_config.json
+src/*.rtf
+src/*.spec
+tools/*.exe
+
