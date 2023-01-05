@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 """ qr scanner
+
+https://www.simplifiedpython.net/kivy-button-example-tutorial-working-with-buttons-in-kivy/
 """
 
 # W0613: Unused argument 'args' (unused-argument)
