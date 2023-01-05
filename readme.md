@@ -1,4 +1,4 @@
-# 1. KNX qr scanner
+# 1. qr scanner
 
 ## 1.1. Dependencies
 
