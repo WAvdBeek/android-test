@@ -26,10 +26,10 @@ class QrScanner(BoxLayout):
     def __init__(self, **kwargs):
         super(QrScanner, self).__init__(**kwargs)
         btn1 = Button(text='Scan Me',  font_size="50sp")
-        btn1.bind(on_press=self.callback)
+        btn1.bind(on_press=self.callback) # pylint: disable=[E1101]
         self.add_widget(btn1)
         btn2 = Button(text='Share Me',  font_size="50sp")
-        btn2.bind(on_press=self.share)
+        btn2.bind(on_press=self.share) # pylint: disable=[E1101]
         self.add_widget(btn2)
 
     def callback(self, instance):
@@ -45,7 +45,7 @@ class QrScanner(BoxLayout):
             self.qr_text = self.zbarcam.symbols[0].data # text from QR
             Clock.unschedule(self.read_qr_text, 1)
             self.zbarcam.stop() # stop zbarcam
-            self.zbarcam.ids['xcamera']._camera._device.release() # release camera
+            self.zbarcam.ids['xcamera']._camera._device.release() # pylint: disable=[W0212] release camera
 
     def share(self):
         """intent code"""
