@@ -24,7 +24,7 @@ String = autoclass('java.lang.String')
 
 class QrScanner(BoxLayout):
     def __init__(self, **kwargs):
-         """init reader"""
+        """init reader"""
         super(QrScanner, self).__init__(**kwargs)
         btn1 = Button(text='Scan Me',  font_size="50sp")
         btn1.bind(on_press=self.callback) # pylint: disable=E1101
