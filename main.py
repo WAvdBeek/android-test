@@ -7,8 +7,9 @@ https://www.simplifiedpython.net/kivy-button-example-tutorial-working-with-butto
 # W0613: Unused argument 'args' (unused-argument)
 # pylint: disable=W0613
 
+
 from kivy.app import App
-from kivy.uix.widget import Widget
+#from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.clock import Clock
@@ -23,6 +24,8 @@ String = autoclass('java.lang.String')
 
 
 class QrScanner(BoxLayout):
+"""qr scanner class"""
+
     def __init__(self, **kwargs):
         """init reader"""
         super(QrScanner, self).__init__(**kwargs)
@@ -48,7 +51,8 @@ class QrScanner(BoxLayout):
             self.qr_text = self.zbarcam.symbols[0].data # text from QR
             Clock.unschedule(self.read_qr_text, 1)
             self.zbarcam.stop() # stop zbarcam
-            self.zbarcam.ids['xcamera']._camera._device.release() # pylint: disable=W0212 release camera
+            # release camera
+            self.zbarcam.ids['xcamera']._camera._device.release() # pylint: disable=W0212
 
     def share(self):
         """intent code"""
