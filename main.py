@@ -24,7 +24,7 @@ String = autoclass('java.lang.String')
 
 
 class QrScanner(BoxLayout):
-"""qr scanner class"""
+    """qr scanner class"""
 
     def __init__(self, **kwargs):
         """init reader"""
